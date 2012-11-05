@@ -646,9 +646,9 @@ BUTTONS
 *********************/
 .button,
 .button:visited {
-  border: 1px solid #f07800;
-  border-top-color: #ff870f;
-  border-left-color: #ff870f;
+  border: 1px solid #bd7100;
+  border-top-color: #db8400;
+  border-left-color: #db8400;
   padding: 4px 12px;
   color: #f2f2f2;
   display: inline-block;
@@ -667,36 +667,36 @@ BUTTONS
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  background-color: #ff8c19;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9933), to(#ff8c19));
-  background-image: -webkit-linear-gradient(top, #ff9933, #ff8c19);
-  background-image: -moz-linear-gradient(top, #ff9933, #ff8c19);
-  background-image: -o-linear-gradient(top, #ff9933, #ff8c19);
-  background-image: linear-gradient(to bottom, #ff9933, #ff8c19);
+  background-color: #e68a00;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9900), to(#e68a00));
+  background-image: -webkit-linear-gradient(top, #ff9900, #e68a00);
+  background-image: -moz-linear-gradient(top, #ff9900, #e68a00);
+  background-image: -o-linear-gradient(top, #ff9900, #e68a00);
+  background-image: linear-gradient(to bottom, #ff9900, #e68a00);
 }
 .button:hover,
 .button:visited:hover,
 .button:focus,
 .button:visited:focus {
   color: #f2f2f2;
-  border: 1px solid #f07800;
-  border-top-color: #cc6600;
-  border-left-color: #cc6600;
-  background-color: #ff8000;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff8c19), to(#ff8000));
-  background-image: -webkit-linear-gradient(top, #ff8c19, #ff8000);
-  background-image: -moz-linear-gradient(top, #ff8c19, #ff8000);
-  background-image: -o-linear-gradient(top, #ff8c19, #ff8000);
-  background-image: linear-gradient(to bottom, #ff8c19, #ff8000);
+  border: 1px solid #bd7100;
+  border-top-color: #995c00;
+  border-left-color: #995c00;
+  background-color: #cc7a00;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e68a00), to(#cc7a00));
+  background-image: -webkit-linear-gradient(top, #e68a00, #cc7a00);
+  background-image: -moz-linear-gradient(top, #e68a00, #cc7a00);
+  background-image: -o-linear-gradient(top, #e68a00, #cc7a00);
+  background-image: linear-gradient(to bottom, #e68a00, #cc7a00);
 }
 .button:active,
 .button:visited:active {
-  background-color: #ff9933;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff8c19), to(#ff9933));
-  background-image: -webkit-linear-gradient(top, #ff8c19, #ff9933);
-  background-image: -moz-linear-gradient(top, #ff8c19, #ff9933);
-  background-image: -o-linear-gradient(top, #ff8c19, #ff9933);
-  background-image: linear-gradient(to bottom, #ff8c19, #ff9933);
+  background-color: #ff9900;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e68a00), to(#ff9900));
+  background-image: -webkit-linear-gradient(top, #e68a00, #ff9900);
+  background-image: -moz-linear-gradient(top, #e68a00, #ff9900);
+  background-image: -o-linear-gradient(top, #e68a00, #ff9900);
+  background-image: linear-gradient(to bottom, #e68a00, #ff9900);
 }
 .blue-button,
 .blue-button:visited {
@@ -812,9 +812,9 @@ LINK STYLES
 *********************/
 a,
 a:visited {
-  color: #ff9933;
+  color: #ff9900;
   text-decoration: none;
-  border-bottom: 1px dotted #ff9933;
+  border-bottom: 1px dashed #ff9900;
   /* on hover */
 
   /* on click */
@@ -826,7 +826,7 @@ a:hover,
 a:visited:hover,
 a:focus,
 a:visited:focus {
-  color: #ff8205;
+  color: #d17d00;
 }
 a:link,
 a:visited:link {
@@ -878,7 +878,7 @@ h1,
 .h1 {
   font-size: 2.5em;
   line-height: 1.333em;
-  color: #ff9933;
+  color: #ff9900;
 }
 h2,
 .h2 {
@@ -929,6 +929,7 @@ HEADER SYTLES
 
   font-size: 1.125em;
   font-weight: 300;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -941,8 +942,8 @@ HEADER SYTLES
   white-space: nowrap;
   overflow: hidden;
   display: block;
-  width: 230px;
-  min-height: 140px;
+  width: 161px;
+  min-height: 149px;
   margin: 0 auto;
 }
 /*********************
@@ -956,6 +957,7 @@ the navs on the site and our css is cleaner
 and moe scalable.
 */
 .nav {
+  width: 100%;
   border-bottom: 0;
   float: left;
   margin-left: 10px;
@@ -1000,15 +1002,14 @@ HOME PAGE STYLES
 *********************/
 .block-list {
   margin: 0 auto 0 auto;
+  height: auto;
 }
 .block-list li {
+  padding: 0 auto;
   display: block;
-  width: 350px;
-  margin: 0;
-  padding: 0;
-  margin-left: 2.762430939%;
+  margin: 10px auto;
   height: 350px;
-  float: left;
+  width: 350px;
 }
 .block-list li a {
   margin: 0;
@@ -1018,7 +1019,7 @@ HOME PAGE STYLES
   display: block;
   width: 350px;
   height: 350px;
-  background-color: #ff9933;
+  background-color: #ff9900;
 }
 .block-list li a h2 {
   margin: 0;
@@ -1360,14 +1361,19 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
+.widgettitle {
+  padding-left: 20px;
+  background: url(../images/genuine-arrows-small.png) 5px 5px no-repeat;
+}
 .widget {
-  border: 2px solid #ff9933;
-  padding-bottom: 10px;
+  border: 2px solid #ff9900;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 .widget h3 {
   text-transform: uppercase;
-  color: #ff9933;
-  border-bottom: 1px dashed #ff9933;
+  color: #ff9900;
+  border-bottom: 1px dashed #ff9900;
 }
 .widget ul li {
   /* deep nesting */

@@ -85,7 +85,7 @@ LINK STYLES
 a, a:visited {
 	color: @plink-color;
 	text-decoration: none;
-	border-bottom: 1px dotted @genuine-yellow;
+	border-bottom: 1px dashed @genuine-yellow;
 
 	/* on hover */
 	&:hover, &:focus {
@@ -178,7 +178,7 @@ HEADER SYTLES
 
 .header .nav li a {
 	.h3;
-
+	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 
@@ -188,8 +188,8 @@ HEADER SYTLES
 	background: url(../images/genuine-logo.png) no-repeat;
 	.image-replacement;
 	display: block;
-	width: 230px;
-	min-height: 140px;
+	width: 161px;
+	min-height: 149px;
 	margin: 0 auto;
 }
 
@@ -207,6 +207,7 @@ and moe scalable.
 
 
 .nav {
+	width: 100%;
 	border-bottom: 0;
 	float: left;
 	margin-left: 10px;
@@ -283,16 +284,16 @@ HOME PAGE STYLES
 *********************/
 .block-list {
 	margin: 0 auto 0 auto;
+	height: auto;
 	}
 
 .block-list li {
+
+	padding: 0 auto;
 	display: block;
-	width: 350px;
-	margin: 0;
-	padding: 0;
-	margin-left: 2.762430939%;
+    margin: 10px auto;
 	height: 350px;
-	float: left;
+	width: 350px;
 
 }
 .block-list li a {
@@ -857,11 +858,17 @@ SIDEBARS & ASIDES
 
 .sidebar {}
 
-	.widgettitle {}
+	.widgettitle {
+		padding-left: 20px;
+		background: url(../images/genuine-arrows-small.png) 5px 5px no-repeat;
+
+	}
 
 	.widget {
 		border: 2px solid @genuine-yellow;
-		padding-bottom:  10px;
+		padding:  10px;
+		margin-bottom: 10px;
+
 
 		h3 {
 			text-transform: uppercase;

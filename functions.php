@@ -80,8 +80,8 @@ function bones_register_sidebars() {
     	'description' => 'The first (primary) sidebar.',
     	'before_widget' => '<div id="%1$s" class="widget %2$s">',
     	'after_widget' => '</div>',
-    	'before_title' => '<h4 class="widgettitle">',
-    	'after_title' => '</h4>',
+    	'before_title' => '<h3 class="widgettitle">',
+    	'after_title' => '</h3>',
     ));
     
     /* 
@@ -101,6 +101,9 @@ function bones_register_sidebars() {
     	'before_title' => '<h4 class="widgettitle">',
     	'after_title' => '</h4>',
     ));
+
+
+
     
     To call the sidebar in your template, you can just copy
     the sidebar.php file and rename it to your sidebar's name.
@@ -108,6 +111,15 @@ function bones_register_sidebars() {
     sidebar-sidebar2.php
     
     */
+    register_sidebar(array(
+        'id' => 'sidebar-home',
+        'name' => 'home Side Bar',
+        'description' => 'The home page sidebar.',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widgettitle">',
+        'after_title' => '</h3>',
+    ));
 } // don't remove this bracket!
 
 /************* COMMENT LAYOUT *********************/

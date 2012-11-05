@@ -11,16 +11,19 @@ and will be used across all viewports.
 
 ******************************************************************/
 
+
 /*********************
 GENERAL STYLES
 *********************/
 
 body {
-	font-family: Georgia, serif;
-	font-size: 14px;
+	font-family: @sans-serif;
+	font-size: 16px;
 	line-height: 1.5;
 	color: #565656;
+	background-color: @genuine-dark;
 }
+
 
 /********************
 WORDPRESS BODY CLASSES
@@ -72,12 +75,17 @@ LAYOUT & GRID STYLES
 	margin: 0 auto;
 }
 
+
+
+
 /*********************
 LINK STYLES
 *********************/
 
 a, a:visited {
-	color: @link-color;
+	color: @plink-color;
+	text-decoration: none;
+	border-bottom: 1px dotted @genuine-yellow;
 
 	/* on hover */
 	&:hover, &:focus {
@@ -105,9 +113,9 @@ H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-	font-family: @sans-serif;
+	font-family: @header;
 	text-rendering: optimizelegibility;
-	font-weight: 500;
+	font-weight: 300;
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -122,6 +130,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 h1, .h1 {
 	font-size: 2.5em;
 	line-height: 1.333em;
+	color: @genuine-yellow;
 }
 
 h2, .h2 {
@@ -132,6 +141,7 @@ h2, .h2 {
 
 h3, .h3 {
 	font-size: 1.125em;
+	font-weight: 300;
 }
 
 h4, .h4 {
@@ -150,9 +160,38 @@ h5, .h5 {
 HEADER SYTLES
 *********************/
 
-.header {}
+.header {
+	background-color: @genuine-dark;
+	display: block;
+	min-height: 100px;
+	border-bottom: 5px solid #fff;
 
-	#logo {}
+
+}
+
+.nav li {
+	
+	margin-right: 1%;
+	float: left;
+	width: 48%;
+}
+
+.header .nav li a {
+	.h3;
+
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
+}
+
+#logo {
+	background: url(../images/genuine-logo.png) no-repeat;
+	.image-replacement;
+	display: block;
+	width: 230px;
+	min-height: 140px;
+	margin: 0 auto;
+}
 
 /*********************
 NAVIGATION STYLES
@@ -166,9 +205,13 @@ the navs on the site and our css is cleaner
 and moe scalable.
 */
 
+
 .nav {
-	border: 1px solid #ccc;
 	border-bottom: 0;
+	float: left;
+	margin-left: 10px;
+	font-family: 'Oswald', sans-serif;
+
 
 	li {
 
@@ -176,9 +219,7 @@ and moe scalable.
 			display: block;
 			text-decoration: none;
 			padding: 10px 10px;
-			background-color: #eee;
-			border-bottom: 1px solid #ccc;
-
+			background-color: transparent;
 			/*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -226,6 +267,7 @@ and moe scalable.
 
 	} /* end .menu li */
 
+
 	/* highlight current page */
 	li.current-menu-item,
 	li.current_page_item,
@@ -236,14 +278,47 @@ and moe scalable.
 	}  /* end current highlighters */
 
 } /* end .nav */
+/*********************
+HOME PAGE STYLES
+*********************/
+.block-list {
+	margin: 0 auto 0 auto;
+	}
 
+.block-list li {
+	display: block;
+	width: 350px;
+	margin: 0;
+	padding: 0;
+	margin-left: 2.762430939%;
+	height: 350px;
+	float: left;
+
+}
+.block-list li a {
+	margin: 0;
+	padding: 0;
+	border: 1px ;
+	border-radius: 50%;
+	display: block;
+		width: 350px;
+	height: 350px;
+	background-color: @genuine-yellow;
+}
+.block-list li a h2 {
+		margin: 0;
+	padding: 0;
+	color: @genuine-blue;
+	padding-top: 165px;
+	text-align: center;
+}
 
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	margin-top: 2.2em;
+	margin: 2em 0;
 }
 
 		.hentry {
@@ -414,6 +489,7 @@ PAGE NAVI STYLES
 				display: block;
 				text-decoration: none;
 				position: relative;
+
 
 				&:hover,
 				&:focus {
@@ -784,6 +860,15 @@ SIDEBARS & ASIDES
 	.widgettitle {}
 
 	.widget {
+		border: 2px solid @genuine-yellow;
+		padding-bottom:  10px;
+
+		h3 {
+			text-transform: uppercase;
+			color: @genuine-yellow;
+			border-bottom: 1px dashed @genuine-yellow;
+		}
+
 
 		ul {
 
@@ -793,10 +878,13 @@ SIDEBARS & ASIDES
 
 				&:last-child {}
 
-				a {}
+				a {
+					font-family: @header;
+				}
 
 				/* deep nesting */
 				ul {}
+
 
 			}
 
@@ -804,14 +892,16 @@ SIDEBARS & ASIDES
 
 	}
 
+
 /*********************
 FOOTER STYLES
 *********************/
 
 .footer {
 	clear: both;
+	background: @genuine-dark;
+	border-top: 5px solid #fff;
 }
-
 	/*
 	if you checked out the link above:
 	http://www.alistapart.com/articles/organizing-mobile/

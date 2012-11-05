@@ -33,19 +33,28 @@ HEADER SYTLES
 
 .header {}
 
-	#logo {}
+
+.header .nav {
+	margin-top: 45px;
+}
+
+
+#logo {
+	float: left;
+
+	}
 
 /*********************
 NAVIGATION STYLES
 *********************/
 
 .nav {
-	background: #eee;
 	border: 0;
-
+	 .ninecol;
 	li {
 		float: left;
 		position: relative;
+		width: auto;
 
 		a {
 			border-bottom: 0;
@@ -55,7 +64,7 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				background-color: #dedede;
+				color: #dedede;
 
 			}
 		}
@@ -137,17 +146,15 @@ SIDEBARS & ASIDES
 *********************/
 
 .sidebar {
-	margin-top: 2.2em;
 }
 
 	.widgettitle {
-		border-bottom: 2px solid #444;
 		margin-bottom: 0.75em;
 	}
 
 	.widget {
-		padding: 0 10px;
-		margin: 2.2em 0;
+		padding: 0 10px 10px 10px;
+		margin: 0 0 2.2em 0;
 
 		ul {
 			li {

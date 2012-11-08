@@ -22,14 +22,14 @@
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 				
   		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-		
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
 			
 		<!-- drop Google Analytics Here -->
 		<!-- end analytics -->
-		
+		<script type="text/javascript" src="//use.typekit.net/aqh8qrd.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	</head>
 	
 	<body <?php body_class(); ?>>

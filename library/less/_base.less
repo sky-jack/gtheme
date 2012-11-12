@@ -29,14 +29,13 @@ and will be used across all viewports.
 
 
 
-
 /*********************
 01. GENERAL STYLES
 *********************/
 
 body {
 	font-family: @sans-serif;
-	font-size: 16px;
+	font-size: 100%;
 	line-height: 1.5;
 	color: #565656;
 	background-color: @genuine-dark;
@@ -209,6 +208,7 @@ h5, .h5 {
 	width: 161px;
 	min-height: 149px;
 	margin: 0 auto;
+	margin-top: 20px;
 }
 
 /*********************
@@ -309,29 +309,44 @@ HOME PAGE STYLES
 
 	padding: 0 auto;
 	display: block;
-    margin: 10px auto;
-	height: 350px;
+    margin: 0 auto 20px auto;
 	width: 350px;
-
+	height: 350px;
+}
+.block-list li.entertainment a {
+	background: url(../images/speaker-home.png) no-repeat;
+}
+.block-list li.music-consultancy a {
+	background: url(../images/reel-home.png) no-repeat;
+}
+.block-list li.workshops a {
+		background: url(../images/microphone-home.png) no-repeat;
+}
+.block-list li.events a {
+		background: url(../images/cd-home.png) no-repeat;
 }
 .block-list li a {
 	margin: 0;
 	padding: 0;
-	border: 1px ;
-	border-radius: 50%;
+	border: 1px;
 	display: block;
-		width: 350px;
+	background-size: 350px !important;
+	width: 350px;
 	height: 350px;
-	background-color: @genuine-yellow;
 }
 .block-list li a h2 {
-		margin: 0;
-	padding: 0;
-	color: @genuine-blue;
-	padding-top: 165px;
+	margin: 0;
+	padding: 140px 0 0 0;
 	text-align: center;
 }
-
+.block-list li a h2 span {
+	padding-left: 60px;
+}
+.block-list li a h2 em {
+	font-size: 180%;
+	font-style: normal;
+	display: block;
+}
 /*********************
 08. POSTS & CONTENT STYLES
 *********************/
@@ -946,6 +961,59 @@ HOME PAGE STYLES
 
 	} /* end .footer-links */
 
+	.sharing-module {
+		margin: 1em auto 1em auto;
+		width: 100%;
+	}
 
-	.copyright {}
+	.sharing-links {
+		display: block;
+		width: 100%;
+	}
+
+	.sharing-links li {
+		display: inline;
+		float: left;
+
+	}
+	.sharing-links li.sharing  {
+		display: block;
+		width: 34px;
+		height: 34px;
+		overflow: hidden;
+		margin-right: 6%;
+		background: url(../images/social-icons.png) no-repeat;
+		.image-replacement;
+		
+	}
+	.sharing-links li.facebook  {
+		background-position: -40px 0px;
+	}
+	.sharing-links li.youtube  {
+		background-position: -80px 0px;
+	}
+	.sharing-links li.vimeo  {
+		background-position: -122px 0px;
+	}
+	.sharing-links li.instagram  {
+		background-position: -164px 0px;
+	}
+	.sharing-links li.rss  {
+		background-position: -204px 0px;
+	}
+	.sharing-links li.soundcloud  {
+		background-position: -244px 0px;
+	}
+	.sharing-links li.sharing a {
+		text-decoration: none;
+		width: 34px;
+		height: 34px;
+		display: block;
+		border-bottom: 0px none transparent;
+	}
+	
+
+	.copyright {
+		clear: both;
+	}
 

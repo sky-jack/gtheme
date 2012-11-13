@@ -2,6 +2,7 @@
 			
 				<div id="inner-footer" class="wrap clearfix">
 					<div class="sharing-module">
+						<h5> Share With Genuine </h5>
 						<ul class="sharing-links">
 							<li class="sharing twitter"> <a href="">Twitter</a></li>
 							<li class="sharing facebook"> <a href="">Facebook</a></li>
@@ -16,7 +17,29 @@
 					<nav role="navigation">
     					<?php bones_footer_links(); ?>
 	                </nav>
-	                		
+
+	                <div class="mail-sign-up">
+	                	<h5> Sign Up To Recieve Newsletter </h5>
+
+						<form id="mailform" class="mail-form " name="signup" action="http://gwilymgold.com/pommo/user/process.php" method="post">
+							<label for="Email">mail form</label>
+							<span>
+								<input class="short_button" type="image" value="Subscribe" alt="subscribe" >
+							</span>
+
+							<span>
+								<input class="short_submit" type="text" maxlength="80" value="enter your email" name="Email">
+							</span>
+								
+							<input type="hidden" value="true" name="pommo_signup">
+						</form>
+
+						<h5 class="footer-logo">
+							Genuine Music Concierge
+						</h5>	
+	                </div>
+
+		
 					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
 				
 				</div> <!-- end #inner-footer -->

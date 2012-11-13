@@ -27,7 +27,9 @@ and will be used across all viewports.
 
 ******************************************************************/
 
-
+html {
+	background: @genuine-dark url(../images/bg-black.jpg) repeat;
+}
 
 /*********************
 01. GENERAL STYLES
@@ -35,13 +37,16 @@ and will be used across all viewports.
 
 body {
 	font-family: @sans-serif;
-	font-size: 100%;
-	line-height: 1.5;
-	color: #565656;
-	background-color: @genuine-dark;
+	font-size: 110%;
+	line-height: 1.6;
+	color: #9b9b9b;
+
+	
 }
 
-
+p {
+	text-shadow: 1px 1px 0px lighten(#000000, 10%);
+}
 /********************
 02. WORDPRESS BODY CLASSES
     style a page via class
@@ -100,9 +105,9 @@ body {
 *********************/
 
 a, a:visited {
-	color: @plink-color;
+	color: @genuine-blue;
 	text-decoration: none;
-	border-bottom: 1px dashed @genuine-yellow;
+	//border-bottom: 1px solid @genuine-yellow;
 
 	/* on hover */
 	&:hover, &:focus {
@@ -159,16 +164,20 @@ h2, .h2 {
 h3, .h3 {
 	font-size: 1.125em;
 	font-weight: 300;
+	.header-style;
 }
 
 h4, .h4 {
 	font-size: 1.1em;
-	font-weight: 700;
+	font-weight: 500;
+	border-bottom: 0;
 }
 
 h5, .h5 {
 	font-size: 0.846em;
 	line-height: 2.09em;
+	.header-style;
+	border-bottom: 0px none;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
@@ -178,7 +187,6 @@ h5, .h5 {
 *********************/
 
 .header {
-	background-color: @genuine-dark;
 	display: block;
 	min-height: 100px;
 	border-bottom: 5px solid #fff;
@@ -239,6 +247,7 @@ and moe scalable.
 			text-decoration: none;
 			padding: 10px 10px;
 			background-color: transparent;
+			.h5;
 			/*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -330,20 +339,44 @@ HOME PAGE STYLES
 	padding: 0;
 	border: 1px;
 	display: block;
+	color: @genuine-yellow;
 	background-size: 350px !important;
 	width: 350px;
 	height: 350px;
 }
 .block-list li a h2 {
-	margin: 0;
+	margin: -10px 0;
 	padding: 140px 0 0 0;
 	text-align: center;
+	line-height: 1.1em;
 }
 .block-list li a h2 span {
-	padding-left: 60px;
+	padding-left: 10px;
+	font-size: 80%;
+
 }
+.block-list li.entertainment span {
+	padding-left: 15px;
+}
+.block-list li.music-consultancy span {
+	padding-left: 0px;
+	margin-left: -45px;
+}
+.block-list li.workshops span {
+	margin-top: 10px;
+	display: block;
+
+}
+.block-list li.events span {
+	padding-left: 0px;
+	margin-left: -45px;
+	margin-bottom: -10px;
+}
+
+
+
 .block-list li a h2 em {
-	font-size: 180%;
+	font-size: 210%;
 	font-style: normal;
 	display: block;
 }
@@ -892,21 +925,20 @@ HOME PAGE STYLES
 .sidebar {}
 
 	.widgettitle {
-		padding-left: 20px;
-		background: url(../images/genuine-arrows-small.png) 5px 5px no-repeat;
+		padding:0 0 10px 25px;
+		margin-top: 10px;
+		background: url(../images/genuine-arrows-small.png) 5px 40%  no-repeat;
 
 	}
 
 	.widget {
 		border: 2px solid @genuine-yellow;
-		padding:  10px;
+		padding: 0  10px;
 		margin-bottom: 10px;
 
 
 		h3 {
-			text-transform: uppercase;
-			color: @genuine-yellow;
-			border-bottom: 1px dashed @genuine-yellow;
+			.header-style;
 		}
 
 
@@ -939,7 +971,6 @@ HOME PAGE STYLES
 
 .footer {
 	clear: both;
-	background: @genuine-dark;
 	border-top: 5px solid #fff;
 }
 	/*
@@ -969,19 +1000,24 @@ HOME PAGE STYLES
 	.sharing-links {
 		display: block;
 		width: 100%;
+		text-align: center;
 	}
 
 	.sharing-links li {
-		display: inline;
-		float: left;
+		position: relative;
+    	display: inline-block;
 
 	}
+	body.ie7 .sharing-links li {
+		*display: inline;
+		zoom: 1;
+	}
 	.sharing-links li.sharing  {
-		display: block;
-		width: 34px;
+		width: 33px;
 		height: 34px;
 		overflow: hidden;
-		margin-right: 6%;
+		margin: 0 2% 0 2%;
+		text-align: center;
 		background: url(../images/social-icons.png) no-repeat;
 		.image-replacement;
 		
@@ -993,7 +1029,7 @@ HOME PAGE STYLES
 		background-position: -80px 0px;
 	}
 	.sharing-links li.vimeo  {
-		background-position: -122px 0px;
+		background-position: -123px 0px;
 	}
 	.sharing-links li.instagram  {
 		background-position: -164px 0px;
@@ -1011,8 +1047,62 @@ HOME PAGE STYLES
 		display: block;
 		border-bottom: 0px none transparent;
 	}
-	
 
+	.footer-logo {
+		.image-replacement;
+		width: 65px;
+		height: 64px;
+		background: url(../images/genuine-logo-small.png) no-repeat;
+		float: left;
+		margin: 0 0 0 15%;
+
+	}
+	/* Sign Up Form */
+
+	#mailform {
+		display: block;
+		float: left;
+		height: 60px;
+		margin: 16px 0 0 0;
+	}
+	.mail-sign-up {
+		height: 90px;
+		margin: 10px auto 0 auto;
+	}
+	.mail-sign-up h3 {
+
+	}
+
+	.mail-sign-up input {
+	    border: 0 none;
+	    padding-left: 6px;
+	}
+
+	.mail-sign-up {
+	}
+
+ 	.mail-sign-up input.short_submit {
+		color: #f2f2f2;
+		height: 32px;
+		border: 2px solid @genuine-yellow;
+		width: 240px;
+		float: left;
+		display: block;
+		clear: right;
+	}
+
+	.mail-sign-up input.short_button {
+		margin-right: 10px;
+		float: left;
+
+	}
+
+	.mail-sign-up input:focus {
+	    background-color: #f2f2f2689;
+	}
+	.mail-sign-up label {
+	    display: none;
+	} 
 	.copyright {
 		clear: both;
 	}

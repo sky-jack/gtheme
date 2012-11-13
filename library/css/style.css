@@ -548,6 +548,12 @@ http://sachagreif.com/sass-color-variables/
 /*********************
 TYPOGRAPHY
 *********************/
+/* main header style */
+.header-style {
+  text-transform: uppercase;
+  color: #ff9900;
+  border-bottom: 1px dashed #ff9900;
+}
 /* 	To embed your own fonts, use this syntax
 	and place your fonts inside the 
 	library/fonts folder. For more information
@@ -567,6 +573,7 @@ TYPOGRAPHY
 	}
 */
 /* 
+
 use the best ampersand 
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
@@ -600,8 +607,8 @@ span.amp {
   margin: 10px;
   padding: 5px 18px;
   border: 1px solid;
-  border-color: #bfe4f4;
-  background: #d5edf8;
+  border-color: #c2d4da;
+  background: #d2dfe4;
 }
 .alert-error {
   margin: 10px;
@@ -644,6 +651,16 @@ BOX SHADOW
 /*********************
 BUTTONS
 *********************/
+.short_button {
+  position: relative;
+  text-indent: -2000px;
+  background: url(../images/big-arrow.png) 0 0 no-repeat;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
 .button,
 .button:visited {
   border: 1px solid #bd7100;
@@ -700,38 +717,38 @@ BUTTONS
 }
 .blue-button,
 .blue-button:visited {
-  border-color: #407fbf;
-  text-shadow: 0 1px 1px #407fbf;
-  background-color: #538cc6;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#6699cc), to(#538cc6));
-  background-image: -webkit-linear-gradient(top, #6699cc, #538cc6);
-  background-image: -moz-linear-gradient(top, #6699cc, #538cc6);
-  background-image: -o-linear-gradient(top, #6699cc, #538cc6);
-  background-image: linear-gradient(to bottom, #6699cc, #538cc6);
-  -webkit-box-shadow: inset 0 0 3px #a3c2e0;
-  -moz-box-shadow: inset 0 0 3px #a3c2e0;
-  box-shadow: inset 0 0 3px #a3c2e0;
+  border-color: #b2c8d1;
+  text-shadow: 0 1px 1px #b2c8d1;
+  background-color: #c2d4da;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d2dfe4), to(#c2d4da));
+  background-image: -webkit-linear-gradient(top, #d2dfe4, #c2d4da);
+  background-image: -moz-linear-gradient(top, #d2dfe4, #c2d4da);
+  background-image: -o-linear-gradient(top, #d2dfe4, #c2d4da);
+  background-image: linear-gradient(to bottom, #d2dfe4, #c2d4da);
+  -webkit-box-shadow: inset 0 0 3px #ffffff;
+  -moz-box-shadow: inset 0 0 3px #ffffff;
+  box-shadow: inset 0 0 3px #ffffff;
 }
 .blue-button:hover,
 .blue-button:visited:hover,
 .blue-button:focus,
 .blue-button:visited:focus {
-  border-color: #3973ac;
-  background-color: #407fbf;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#578fc7), to(#407fbf));
-  background-image: -webkit-linear-gradient(top, #578fc7, #407fbf);
-  background-image: -moz-linear-gradient(top, #578fc7, #407fbf);
-  background-image: -o-linear-gradient(top, #578fc7, #407fbf);
-  background-image: linear-gradient(to bottom, #578fc7, #407fbf);
+  border-color: #a2bdc7;
+  background-color: #b2c8d1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c5d6dc), to(#b2c8d1));
+  background-image: -webkit-linear-gradient(top, #c5d6dc, #b2c8d1);
+  background-image: -moz-linear-gradient(top, #c5d6dc, #b2c8d1);
+  background-image: -o-linear-gradient(top, #c5d6dc, #b2c8d1);
+  background-image: linear-gradient(to bottom, #c5d6dc, #b2c8d1);
 }
 .blue-button:active,
 .blue-button:visited:active {
-  background-color: #6699cc;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#538cc6), to(#6699cc));
-  background-image: -webkit-linear-gradient(top, #538cc6, #6699cc);
-  background-image: -moz-linear-gradient(top, #538cc6, #6699cc);
-  background-image: -o-linear-gradient(top, #538cc6, #6699cc);
-  background-image: linear-gradient(to bottom, #538cc6, #6699cc);
+  background-color: #d2dfe4;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c2d4da), to(#d2dfe4));
+  background-image: -webkit-linear-gradient(top, #c2d4da, #d2dfe4);
+  background-image: -moz-linear-gradient(top, #c2d4da, #d2dfe4);
+  background-image: -o-linear-gradient(top, #c2d4da, #d2dfe4);
+  background-image: linear-gradient(to bottom, #c2d4da, #d2dfe4);
 }
 /*
 BASE (MOBILE) SIZE
@@ -767,15 +784,20 @@ and will be used across all viewports.
 13. FOOTER STYLES
 
 ******************************************************************/
+html {
+  background: #000000 url(../images/bg-black.jpg) repeat;
+}
 /*********************
 01. GENERAL STYLES
 *********************/
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 100%;
-  line-height: 1.5;
-  color: #565656;
-  background-color: #000000;
+  font-family: "freight-sans-pro", Trebuchet, Arial, sans-serif;
+  font-size: 110%;
+  line-height: 1.6;
+  color: #9b9b9b;
+}
+p {
+  text-shadow: 1px 1px 0px #1a1a1a;
 }
 /********************
 02. WORDPRESS BODY CLASSES
@@ -828,9 +850,8 @@ body {
 *********************/
 a,
 a:visited {
-  color: #ff9900;
+  color: #d2dfe4;
   text-decoration: none;
-  border-bottom: 1px dashed #ff9900;
   /* on hover */
 
   /* on click */
@@ -842,7 +863,7 @@ a:hover,
 a:visited:hover,
 a:focus,
 a:visited:focus {
-  color: #d17d00;
+  color: #fec977;
 }
 a:link,
 a:visited:link {
@@ -867,7 +888,7 @@ h4,
 .h4,
 h5,
 .h5 {
-  font-family: "tablet-gothic-narrow";
+  font-family: "freight-sans-pro" Trebuchet, Arial, sans-serif;
   text-rendering: optimizelegibility;
   font-weight: 300;
   /*
@@ -906,16 +927,23 @@ h3,
 .h3 {
   font-size: 1.125em;
   font-weight: 300;
+  text-transform: uppercase;
+  color: #ff9900;
+  border-bottom: 1px dashed #ff9900;
 }
 h4,
 .h4 {
   font-size: 1.1em;
-  font-weight: 700;
+  font-weight: 500;
+  border-bottom: 0;
 }
 h5,
 .h5 {
   font-size: 0.846em;
   line-height: 2.09em;
+  color: #ff9900;
+  border-bottom: 1px dashed #ff9900;
+  border-bottom: 0px none;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -923,7 +951,6 @@ h5,
 06. HEADER SYTLES
 *********************/
 .header {
-  background-color: #000000;
   display: block;
   min-height: 100px;
   border-bottom: 5px solid #fff;
@@ -934,7 +961,7 @@ h5,
   width: 48%;
 }
 .header .nav li a {
-  font-family: "tablet-gothic-narrow";
+  font-family: "freight-sans-pro" Trebuchet, Arial, sans-serif;
   text-rendering: optimizelegibility;
   /*
 	if you're going to use webfonts, be sure to check your weights
@@ -945,6 +972,8 @@ h5,
 
   font-size: 1.125em;
   font-weight: 300;
+  color: #ff9900;
+  border-bottom: 1px dashed #ff9900;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1001,6 +1030,23 @@ and moe scalable.
   text-decoration: none;
   padding: 10px 10px;
   background-color: transparent;
+  font-family: "freight-sans-pro" Trebuchet, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  font-weight: 300;
+  /*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+  /* removing text decoration from all headline links */
+
+  font-size: 0.846em;
+  line-height: 2.09em;
+  color: #ff9900;
+  border-bottom: 1px dashed #ff9900;
+  border-bottom: 0px none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   /*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -1008,6 +1054,9 @@ and moe scalable.
 			keep this file as small as possible!
 			*/
 
+}
+.nav li a a {
+  text-decoration: none;
 }
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
@@ -1045,20 +1094,39 @@ HOME PAGE STYLES
   padding: 0;
   border: 1px;
   display: block;
+  color: #ff9900;
   background-size: 350px !important;
   width: 350px;
   height: 350px;
 }
 .block-list li a h2 {
-  margin: 0;
+  margin: -10px 0;
   padding: 140px 0 0 0;
   text-align: center;
+  line-height: 1.1em;
 }
 .block-list li a h2 span {
-  padding-left: 60px;
+  padding-left: 10px;
+  font-size: 80%;
+}
+.block-list li.entertainment span {
+  padding-left: 15px;
+}
+.block-list li.music-consultancy span {
+  padding-left: 0px;
+  margin-left: -45px;
+}
+.block-list li.workshops span {
+  margin-top: 10px;
+  display: block;
+}
+.block-list li.events span {
+  padding-left: 0px;
+  margin-left: -45px;
+  margin-bottom: -10px;
 }
 .block-list li a h2 em {
-  font-size: 180%;
+  font-size: 210%;
   font-style: normal;
   display: block;
 }
@@ -1396,12 +1464,13 @@ HOME PAGE STYLES
 12. SIDEBARS & ASIDES
 *********************/
 .widgettitle {
-  padding-left: 20px;
-  background: url(../images/genuine-arrows-small.png) 5px 5px no-repeat;
+  padding: 0 0 10px 25px;
+  margin-top: 10px;
+  background: url(../images/genuine-arrows-small.png) 5px 40% no-repeat;
 }
 .widget {
   border: 2px solid #ff9900;
-  padding: 10px;
+  padding: 0  10px;
   margin-bottom: 10px;
 }
 .widget h3 {
@@ -1414,14 +1483,13 @@ HOME PAGE STYLES
 
 }
 .widget ul li a {
-  font-family: "tablet-gothic-narrow";
+  font-family: "freight-sans-pro" Trebuchet, Arial, sans-serif;
 }
 /*********************
 13. FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  background: #000000;
   border-top: 5px solid #fff;
 }
 /*
@@ -1441,16 +1509,21 @@ HOME PAGE STYLES
 .sharing-links {
   display: block;
   width: 100%;
+  text-align: center;
 }
 .sharing-links li {
-  display: inline;
-  float: left;
+  position: relative;
+  display: inline-block;
+}
+body.ie7 .sharing-links li {
+  *display: inline;
+  zoom: 1;
 }
 .sharing-links li.sharing {
-  display: block;
-  width: 34px;
+  width: 33px;
   height: 34px;
-  margin-right: 6%;
+  margin: 0 2% 0 2%;
+  text-align: center;
   background: url(../images/social-icons.png) no-repeat;
   text-indent: 100%;
   white-space: nowrap;
@@ -1463,7 +1536,7 @@ HOME PAGE STYLES
   background-position: -80px 0px;
 }
 .sharing-links li.vimeo {
-  background-position: -122px 0px;
+  background-position: -123px 0px;
 }
 .sharing-links li.instagram {
   background-position: -164px 0px;
@@ -1480,6 +1553,50 @@ HOME PAGE STYLES
   height: 34px;
   display: block;
   border-bottom: 0px none transparent;
+}
+.footer-logo {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 65px;
+  height: 64px;
+  background: url(../images/genuine-logo-small.png) no-repeat;
+  float: left;
+  margin: 0 0 0 15%;
+}
+/* Sign Up Form */
+#mailform {
+  display: block;
+  float: left;
+  height: 60px;
+  margin: 16px 0 0 0;
+}
+.mail-sign-up {
+  height: 90px;
+  margin: 10px auto 0 auto;
+}
+.mail-sign-up input {
+  border: 0 none;
+  padding-left: 6px;
+}
+.mail-sign-up input.short_submit {
+  color: #f2f2f2;
+  height: 32px;
+  border: 2px solid #ff9900;
+  width: 240px;
+  float: left;
+  display: block;
+  clear: right;
+}
+.mail-sign-up input.short_button {
+  margin-right: 10px;
+  float: left;
+}
+.mail-sign-up input:focus {
+  background-color: #f2f2f2689;
+}
+.mail-sign-up label {
+  display: none;
 }
 .copyright {
   clear: both;

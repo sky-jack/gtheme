@@ -54,17 +54,19 @@ http://0to255.com/
 @alert-yellow:      #ebe16f;
 @alert-red:         #fbe3e4;
 @alert-green:       #e6efc2;
-@alert-blue:        #d5edf8;
+@alert-blue:        #d2dfe4;
 
 @black:             #222;
 @white:             #f2f2f2;
 
 @genuine-dark: #000;
 @genuine-yellow:        #ff9900;
-@genuine-blue:        #6699cc;
+
+@genuine-blue:        #d2dfe4;
+@genuine-old-blue:    #689cd2;
 
 @plink-color:        @genuine-yellow;
-@link-hover:        darken(@plink-color, 9%);
+@link-hover:        #FEC977;
 
 /*
 Here's a great tutorial on how to
@@ -77,10 +79,19 @@ http://sachagreif.com/sass-color-variables/
 TYPOGRAPHY
 *********************/
 
-@header: 			 "tablet-gothic-narrow";
-@sans-serif:         "Helvetica Neue", Helvetica, Arial, sans-serif; 
-@serif:              "Georgia", Cambria, Times New Roman, Times, serif; 
+@header:			"freight-sans-pro" Trebuchet, Arial, sans-serif; 
+@sans-serif:        "freight-sans-pro", Trebuchet, Arial, sans-serif; 
+@serif:             "Georgia", Cambria, Times New Roman, Times, serif; 
 
+
+
+/* main header style */
+.header-style {
+	text-transform: uppercase;
+	color: @genuine-yellow;
+	border-bottom: 1px dashed @genuine-yellow;
+
+}
 
 /* 	To embed your own fonts, use this syntax
 	and place your fonts inside the 
@@ -103,9 +114,13 @@ TYPOGRAPHY
 */
 
 /* 
+
 use the best ampersand 
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
+
+
+
 span.amp {
   font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif;
   font-style: italic;
@@ -209,6 +224,18 @@ BOX SHADOW
 /*********************
 BUTTONS
 *********************/
+
+.short_button {
+	position: relative;
+	text-indent: -2000px;
+	background: url(../images/big-arrow.png) 0 0 no-repeat;
+	width: 32px;
+	height: 32px;
+	padding: 0;
+	margin: 0;
+	display: block;
+	
+}
 
 .button, .button:visited {
 	border: 1px solid darken(@genuine-yellow, 13%);

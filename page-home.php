@@ -25,12 +25,13 @@ Template Name: Home Page
 						    		<li class="music-consultancy">
 						    			<a href="#test"><h2><span>Music</span> <em>Consultancy</em></h2></a>
 						    		</li>
+						    		<li class="workshops">
+						    			<a href="#test"><h2> <em>Education</em> <span>Workshop</span></h2></a>
+						    		</li>
 						    		<li class="events">
 						    			<a href="#test"><h2><span>Event</span> <em>Programming</em></h2></a>
 						    		</li>
-						    		<li class="workshops">
-						    			<a href="#test"><h2><span>Educational</span> <em>Workshop</em></h2></a>
-						    		</li>
+						    	
 						    	</ul>	
 
 							  <!--  <?php the_content(); ?> -->
